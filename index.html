@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Builder</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding-top: 20px;
+            background-color: rgb(253, 253, 251);
+        }
+        .formBuilder{
+            height:300px;
+        }
+        .formBuilder, .preview {
+            width: 45%;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .formBuilder h1, .preview h1 {
+            margin-bottom: 15px;
+        }
+        .dropdown, input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin: 10px 0;
+        }
+        .Show {
+            width: 100%;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .Show:hover {
+            background-color: darkblue;
+        }
+        .viewer {
+            margin-top: 15px;
+        }
+        .field-container {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="formBuilder">
+        <h1>Form-Builder</h1>
+        <div id="adder">
+            <label for="selectField">Select Field Type</label>
+            <select class="dropdown" id="selectField">
+                <option value="text">Text Input</option>
+                <option value="checkbox">Checkbox</option>
+                <option value="radio">Radio Button</option>
+            </select>
+            
+            <label for="fieldLabel">Field Label</label>
+            <input type="text" id="fieldLabel" class="dropdown" placeholder="Enter field label">
+            
+            <button class="Show" onclick="preview()">Show Preview</button>
+        </div>
+    </div>
+
+    <div class="preview">
+        <h1>Preview</h1>
+        <div class="viewer" id="formPreview"></div>
+    </div>
+    <script src="form.js"></script>
+    </body>
+    </html>
